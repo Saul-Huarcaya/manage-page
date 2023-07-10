@@ -1,0 +1,134 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    
+}
+.section::after{
+    content: "";
+    background-image: url("../../../public/imagenes/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    bottom: 0rem;
+}
+
+.content{
+    cursor: pointer;
+    text-align: center;
+    max-width: 1024px;
+    margin-left: 1rem;
+    margin-left: 1rem;
+}
+.content h2{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--dark_blue);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+    
+.content button{
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    width: 100px;
+    background-color: var(--bright_red);
+    padding: 0.5rem 0.8rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.content button:hover{
+    transition: box-shadow 0.3s ease;
+    opacity: 0.9;
+    box-shadow: 1px 1px 8px 1px black;
+}
+
+.containerAvatar{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 1;
+}
+.containerAvatar img{
+    width: 40px !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.containerAvatar h4{
+    color: var(--dark_blue);
+    margin-bottom: 1rem;
+}
+
+.containerAvatar p{
+    font-size: 1rem;
+    color: var(--dark_grayish_blue);
+}
+@media screen and (min-width: 280px) {
+    .content{
+        width: 280px;
+    }
+    
+}
+@media screen and (max-width:375px) {
+    .section::after{
+        height: 200px !important;
+        left: -3rem;
+    }
+    .content{
+        width: 280px;
+    }
+    .content h2{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 640px) {
+    .content{
+        width: 640px;
+    } 
+    
+}
+@media screen and (max-width:768px) {
+    .section::after{
+        height: 300px;
+        left: -20%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .content{
+        width: 768px;
+    }
+}
+@media screen and (min-width:769px) {
+    .section::after{
+        height: calc(600px + 1vh);
+        left: -50%;
+    }
+    .content{
+        margin-left:1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .section{
+        margin: 0 auto;
+    }
+}

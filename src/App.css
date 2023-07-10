@@ -1,0 +1,37 @@
+img{
+  min-height:auto;
+}
+ul{
+  list-style:none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  background-color: white;
+  position: relative;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+body::before{
+  content: "";
+  background-image: url("../public/imagenes/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 50%;
+  max-width: 700px;
+  height: 700px;
+  top:-5rem;
+  bottom: 40rem;
+  right: 0;
+  z-index: 0;  
+}
+    
+@media screen and (max-width:768px) {
+  body::before{
+    content: "";
+    height: 400px;
+    z-index: 0;
+    background-color: transparent;
+  }
+}
